@@ -2,30 +2,52 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>CRUD application-product page</title>
-        <script src="//www.parsecdn.com/js/parse-1.6.0.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.js"></script>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+        
+        <!-- Include parse library -->
+        <script src="//www.parsecdn.com/js/parse-1.6.7.min.js"></script>
+
     </head>
 
     <body>
 
-        <h1>Product Reviews</h1>
-        <svg></svg>
+        <h1 class='container title'>Rent a pug</h1>
+        <div class='container dog'>
+            <svg id='dogpic' href='svg/Rudy.svg'></svg>
+            <h2>Rudy</h2>
+        </div>
         <p>
             <text>Average Rating: </text>
             <!--add image for average rating here on star scale -->
         </p> 
 
-        <p>Description of product from company</p>
+        <p>This adorable pug is named Rudy.  He is a calm little guy looking for a friend to visit!</p>
         
         <h2>Write a review:</h2>
 
-        <form class='form-group'>
-            <label for='reviewTitle'>Title:</label>
-            <input id='reviewTitle'> </input>
-            
-            <lable for='reviewContent'>Review:</lable>
-            <input id='reviewContent'></input>
-        </form>
+        <div class='container'>
+            <form>
+                <div class='form-group'>
+                    <!--<label for='reviewTitle'>Title:</label> -->
+                    <input id='reviewTitle'></input>
+                </div>
+                <div class='form-group'>
+                    <!--<lable for='reviewContent'>Review:</lable>-->
+                    <input id='reviewContent'></input>
+                </div>
+                <div id='rating'></div>
+                <div>
+
+                    <button class='btn btn-md'>Submit</button>
+                </div>
+            </form>
+        </div>
+        <p>Reviews: </p>
+        <ol id='list'></ol>
 
     </body>
 </html>
