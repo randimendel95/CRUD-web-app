@@ -88,24 +88,26 @@ var buildList = function(data) {
 
 // This function takes in an item, adds it to the screen
 var addItem = function(item) {
+	var well = $('<div>').addClass('well');
+	$('#list').append(well);
 	// Get parameters (title, ) from the data item passed to the function
+	var curScore = item.get('rating');
 	var curTitle = item.get('reviewTitle');
 	var curReview = item.get('reviewContent');
-	var curScore = item.get('rating');
 	totalScore += curScore;
 	//upvotes = item.get('upVotes');
 	//downvotes = item.get('downVotes');
+	well.append('<div class="pull-right">Was this helpful? <button id = "upvote'+item.id+'"><i class="fa fa-thumbs-up"></i></button>' + '<button id = "downvote'+item.id+'""><i class="fa fa-thumbs-down"></i></div>');
 	
-	var curInfo = '<div id="rating'+item.id+'"></div>' + '<div><p id="title'+item.id+'"></p></div>' + '<div><p id="review'+item.id+'"></p></div>';
+	var curInfo = '<div><p id="rating'+item.id+'"></p></div>' + '<div><p id="title'+item.id+'"></p></div>' + '<div><p id="review'+item.id+'"></p></div>';
 	// Append li that includes text from the data item
-	$('#list').append(curInfo);
+	well.append(curInfo);
 	$('#title'+item.id).text(curTitle);
-	$('#rating'+item.id).text(curReview);
+	$('#review'+item.id).text(curReview);
 	$('#rating'+item.id).raty({
 		score:curScore,
 		readOnly: true
 	});
-	$('#list').append('Was this helpful? <button id = "upvote'+item.id+'"><i class="fa fa-thumbs-up"></i></button>' + '<button id = "downvote'+item.id+'""><i class="fa fa-thumbs-down"></i>');
 	
 	$('#upvote'+item.id).click(function() {
 		item.increment('upVotes');
@@ -121,7 +123,15 @@ var addItem = function(item) {
 		});
 	})
 
-	$('#list').append('<p>' + item.get('upVotes') + ' out of ' + (item.get('upVotes')+ item.get('downVotes')) + ' people found this review helpful</p>');
+	well.append('<p>' + item.get('upVotes') + ' out of ' + (item.get('upVotes')+ item.get('downVotes')) + ' people found this review helpful</p>');
+	
+	well.append('<button id="delete'+item.id+'">Delete</button>');
+
+	$('#delete'+item.id).click(function() {
+		item.destroy({
+			success: getData
+		});
+	})
 }
 //when it's done loading the page, get data!
 getData();
