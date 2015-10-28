@@ -23,9 +23,9 @@
             <h2>Rudy</h2>
         </div>
         <p class='container'>
-            <text>Average Rating: </text>
+            <text id = 'averageRating'>Average Rating: </text>
             <!--add image for average rating here on star scale -->
-            <div id='averageRating'></div>
+            
         </p> 
 
         <p class='container'>This adorable pug is named Rudy.  He is a calm little guy looking for a friend to visit!</p>
@@ -34,6 +34,7 @@
 
         <div class='container'>
             <form>
+                <div id='rating'></div>
                 <div class='form-group'>
                     <label for='reviewTitle'></label>
                     <input id='reviewTitle' placeholder='Review Title'></input>
@@ -42,7 +43,7 @@
                     <label for='reviewContent'></label>
                     <input id='reviewContent' placeholder='Write your review here'></input>
                 </div>
-                <div id='rating'></div>
+                
                 <div>
 
                     <button class='btn btn-md'>Submit</button>
@@ -50,8 +51,10 @@
                 <div id='user'></div>
             </form>
         </div>
-        <p>Reviews: </p>
-        <div id='list'></div>
+        <div class='container'>
+            <h2>Reviews: </h2>
+            <div id='list'></div>
+        </div>
         <script src="js/product.js"></script>
 
     </body>
