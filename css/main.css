@@ -3,13 +3,16 @@
 
 .pugtitle {
 	text-align: center;
+	font-size:70px;
 }
 
-#dogpic {
-	flot: left;
+#dogname {
+	font-size: 60px;
 }
 
-.form-group {
-	width: 100vw;
+#averageRating {
+	font-size: 25px;
 }
+
+
 
