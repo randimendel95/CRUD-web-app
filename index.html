@@ -7,7 +7,9 @@
         <title>CRUD application-product page</title>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.js"></script>
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"></link>
+        <!-- bootstrap font awesome-->
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" type="text/css" rel="stylesheet"></link>
+        <!-- include raty library -->
         <script src="js/raty-fa-0.1.1/lib/jquery.raty-fa.js"></script>
         <!-- Include parse library -->
         <script src="https://www.parsecdn.com/js/parse-1.6.7.min.js"></script>
@@ -15,7 +17,7 @@
     </head>
 
     <body>
-
+        <!-- titles -->
         <h1 class='container pugtitle' style='text-align: center'>Rent a pug</h1>
         <div class='container dog'>
             <img id='dogpic' src='svg/rudy.jpg'>
@@ -24,8 +26,7 @@
         </div>
         <p class='container'>
             <text id = 'averageRating'>Average Rating: </text>
-            <!--add image for average rating here on star scale -->
-            
+            <!--add image for average rating on star scale -->
         </p> 
 
         <p class='container'>This adorable pug is named Rudy.  He is a calm little guy looking for a friend to visit!  You can rent him for as short as a day, or keep him for good! </p>
@@ -36,19 +37,21 @@
             <form>
                 <div id='rating'></div>
                 <div class='form-group'>
+                    <!-- review title form element -->
                     <input id='reviewTitle' class='form-control'placeholder='Review Title'></input>
                 </div>
                 <div class='form-group'>
+                    <!-- review content form element -->
                     <input id='reviewContent' class='form-control'placeholder='Write your review here'></input>
                 </div>
                 
                 <div>
-
+                    <!-- button submits user review -->
                     <button class='btn btn-md'>Submit</button>
                 </div>
-                <div id='user'></div>
             </form>
         </div>
+        <!-- holds user reviews -->
         <div class='container'>
             <h2>Reviews: </h2>
             <div id='list'></div>
