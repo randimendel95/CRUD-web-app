@@ -2,21 +2,26 @@
 @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css);
 
 .pugtitle {
-	text-align: center;
-	font-size:70px;
-}
-
-#dogname {
-	font-size: 60px;
-}
-
-#averageRating {
-	font-size: 25px;
+	text-align:center;
 }
 
 #reviewContent {
 	height:130px;
 }
+
+@media screen and (min-width: 768px) {
+	.pugtitle {
+		font-size:70px;
+	}
+
+	#dogname {
+		font-size: 60px;
+	}
+
+	#averageRating {
+		font-size: 25px;
+	}
+
 
 
 
