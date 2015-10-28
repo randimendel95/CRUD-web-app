@@ -6,10 +6,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>CRUD application-product page</title>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.js"></script>
-        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
-        
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"></link>
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" type="text/css" rel="stylesheet"></link>
+        <script src="js/raty-fa-0.1.1/lib/jquery.raty-fa.js"></script>
         <!-- Include parse library -->
-        <script src="//www.parsecdn.com/js/parse-1.6.7.min.js"></script>
+        <script src="https://www.parsecdn.com/js/parse-1.6.7.min.js"></script>
 
     </head>
 
@@ -17,37 +18,41 @@
 
         <h1 class='container title'>Rent a pug</h1>
         <div class='container dog'>
-            <svg id='dogpic' href='svg/Rudy.svg'></svg>
+            <img id='dogpic' src='svg/rudy.jpg'>
+            </img>
             <h2>Rudy</h2>
         </div>
-        <p>
+        <p class='container'>
             <text>Average Rating: </text>
             <!--add image for average rating here on star scale -->
+            <div id='averageRating'></div>
         </p> 
 
-        <p>This adorable pug is named Rudy.  He is a calm little guy looking for a friend to visit!</p>
+        <p class='container'>This adorable pug is named Rudy.  He is a calm little guy looking for a friend to visit!</p>
         
-        <h2>Write a review:</h2>
+        <h2 class='container'>Write a review:</h2>
 
         <div class='container'>
             <form>
                 <div class='form-group'>
-                    <!--<label for='reviewTitle'>Title:</label> -->
-                    <input id='reviewTitle'></input>
+                    <label for='reviewTitle'></label>
+                    <input id='reviewTitle' placeholder='Review Title'></input>
                 </div>
                 <div class='form-group'>
-                    <!--<lable for='reviewContent'>Review:</lable>-->
-                    <input id='reviewContent'></input>
+                    <label for='reviewContent'></label>
+                    <input id='reviewContent' placeholder='Write your review here'></input>
                 </div>
                 <div id='rating'></div>
                 <div>
 
                     <button class='btn btn-md'>Submit</button>
                 </div>
+                <div id='user'></div>
             </form>
         </div>
         <p>Reviews: </p>
-        <ol id='list'></ol>
+        <div id='list'></div>
+        <script src="js/product.js"></script>
 
     </body>
 </html>
